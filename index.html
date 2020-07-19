@@ -14,18 +14,49 @@
     }
     
     body{
-      margin: 0;
-      padding: 0;
       height: 100vh;
       display: flex;
-      font-family: 'digital-clock-font';
       align-items: center;
       justify-content: center;
+      font-family: 'digital-clock-font';
       background-color: rgb(0,0,0);
       color: rgb(255,255,255);
-      font-size: 150px;
+      font-size: 10vw;
     }
     </style>
+
+    <script>
+      function full_screen() {
+        var docElm = document.documentElement;
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        }
+        else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        }
+        else if (docElm.webkitRequestFullScreen) {
+            docElm.webkitRequestFullScreen();
+        }
+        else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+      }
+      
+      function normal_screen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+        else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        }
+        else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+        }
+        else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+      }
+    </script>
 
     <script>
       function showTime() {
@@ -54,9 +85,10 @@
       setInterval(showTime, 1000);
     </script>
      
-    <div style="text-align:center;padding:1em 0;">
-      <p><span id="br"></span> BR</p>
-      <p><span id="uk"></span> UK</p>
+    <div>
+      <input type='button' onclick="full_screen();" value='F' /><input type='button' onclick="normal_screen();" value='N' /><br />
+      <span id="br"></span> BR<br />
+      <span id="uk"></span> UK
     </div>
 </body>
 </html>
