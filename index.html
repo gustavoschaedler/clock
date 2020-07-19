@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<title>Clock</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style>
+    @font-face{
+      font-family:'digital-clock-font';
+      src: url('digital-7-mono.ttf');
+    }
+    
+    body{
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      font-family: 'digital-clock-font';
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(0,0,0);
+      color: rgb(255,255,255);
+      font-size: 150px;
+    }
+    </style>
+
+    <script>
+      function showTime() {
+          const options_uk = {
+                timeZone:"Europe/London",
+                hour12 : false,
+                hour:  "2-digit",
+                minute: "2-digit",
+                //second: "2-digit"
+              };
+          
+          const options_br = {
+                timeZone:"America/Sao_Paulo",
+                hour12 : false,
+                hour:  "2-digit",
+                minute: "2-digit",
+                //second: "2-digit"
+              };
+
+          var time_uk = new Date().toLocaleTimeString("en-GB",options_uk);
+          var time_br = new Date().toLocaleTimeString("en-GB",options_br);
+
+          document.getElementById("uk").innerHTML = time_uk;
+          document.getElementById("br").innerHTML = time_br;
+      }
+      setInterval(showTime, 1000);
+    </script>
+     
+    <div style="text-align:center;padding:1em 0;">
+      <p><span id="br"></span> BR</p>
+      <p><span id="uk"></span> UK</p>
+    </div>
+</body>
+</html>
