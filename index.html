@@ -88,8 +88,8 @@
 
           var time_uk = new Date().toLocaleTimeString("en-GB",options_uk);
           
-          hora_uk = time_uk.split(":");
-          uk_digit = document.getElementById(hora_uk[0]+"_uk_digit");
+          var hora_uk = time_uk.split(":");
+          var uk_digit = document.getElementById(hora_uk[0]+"_uk_digit");
           if (uk_digit) uk_digit.bgColor='green'
 
           document.getElementById("uk").innerHTML = time_uk;
@@ -104,8 +104,8 @@
 
           var time_br = new Date().toLocaleTimeString("en-GB",options_br);
           
-          hora_br = time_br.split(":");
-          br_digit = document.getElementById(hora_br[0]+"_br_digit");
+          var hora_br = time_br.split(":");
+          var br_digit = document.getElementById(hora_br[0]+"_br_digit");
           if (br_digit) br_digit.bgColor='green'
 
           document.getElementById("br").innerHTML = time_br;
@@ -123,7 +123,7 @@
       <td onclick="full_screen();" colspan=27 align='center' id='uk'>UK</td>
     </tr>
     <tr align='center' class='time_texto'>
-      <td bgcolor='tan' id='9_uk_digit'>Start</td>
+      <td bgcolor='tan' id='09_uk_digit'>Start</td>
       <td bgcolor='gray' id='12_uk_digit'>I-Lunch</td>
       <td bgcolor='gray' id='13_uk_digit'>F-Almoco</td>
       <td id='16_uk_digit'></td>
@@ -131,7 +131,7 @@
       <td id='22_uk_digit'></td>
     </tr>
     <tr align='center' class='time_descricao'>
-      <td bgcolor='tan' id='9_uk_digit'>09:00</td>
+      <td bgcolor='tan' id='09_uk_digit'>09:00</td>
       <td bgcolor='gray' id='12_uk_digit'>12:00</td>
       <td bgcolor='gray' id='13_uk_digit'>13:00</td>
       <td id='16_uk_digit'>16:00</td>
@@ -140,9 +140,9 @@
     </tr>
 
     <tr align='center' class='time_texto'>
-      <td id='5_br_digit'></td>
-      <td bgcolor='tan' id='8_br_digit'>Start</td>
-      <td id='9_br_digit'></td>
+      <td id='05_br_digit'></td>
+      <td bgcolor='tan' id='08_br_digit'>Start</td>
+      <td id='09_br_digit'></td>
       <td bgcolor='gray' id='12_br_digit'>I-Lunch</td>
       <td bgcolor='gray' id='13_br_digit'>F-Lunch</td>
       <td bgcolor='tan' id='18_br_digit'>End</td>
