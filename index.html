@@ -37,7 +37,6 @@
     }
     </style>
 
-
     <script>
       function full_screen() {
         var docElm = document.documentElement;
@@ -108,22 +107,38 @@
       setInterval(showTime, 1000);
     </script>
 
-    <table width='100%' height='100%' border=0>
+
+
+    <table width='98%' height='100%' border=0>
     <tr>
-      <td onclick="full_screen();" class='time' id='uk'>UK</td>
-      
-      <td rowspan=2 align='center'>
-        <table width='100%' height='90%' class='time_texto' border=0>
+      <td>
+        <table width='100%' border=0>
+        <tr>
+          <td align='center'>U N I T E D - K I N G D O M</td>
+        </tr>
+        <tr>
+          <td onclick="full_screen();" valign='bottom' class='time' id='uk'>UK</td>
+        </tr>
+        <tr>
+          <td align='center'>B R A Z I L</td>
+        </tr>
+        <tr>
+          <td onclick="normal_screen();" valign='top' class='time' id='br'>BR</td>
+        </tr>
+        </table>
+      </td>
+      <td align='center'>
+        <table width='100%' class='time_texto' border=0>
         <tr align='center'>
-          <td colspan=2 bgcolor='blue'>UK</td>
-          <td colspan=2 bgcolor='blue'>BR</td>
+          <td colspan=2 bgcolor='gray'>UK</td>
+          <td colspan=2 bgcolor='gray'>BR</td>
         </tr>
         <tr align='center'>
-          <td>•</td><td bgcolor='tan'>09:00</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'> 09:00</td>
           <td></td><td>05:00</td>
         </tr>
         <tr align='center'>
-          <td>•</td><td bgcolor='tan'>09:30</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>09:30</td>
           <td></td><td>05:30</td>
         </tr>
         <tr align='center'>
@@ -136,18 +151,18 @@
         </tr>
         <tr align='center'>
           <td></td><td>12:00</td>
-          <td>•</td><td bgcolor='tan'>08:00</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>08:00</td>
         </tr>
         <tr align='center'>
           <td></td><td>12:30</td>
-          <td>•</td><td bgcolor='tan'>08:30</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>08:30</td>
         </tr>
         <tr align='center'>
-          <td>•</td><td bgcolor='tan'>13:00</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>13:00</td>
           <td></td><td>09:00</td>
         </tr>
         <tr align='center'>
-          <td>•</td><td bgcolor='tan'>14:00</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>14:00</td>
           <td></td><td>10:00</td>
         </tr>
         <tr align='center'>
@@ -156,11 +171,11 @@
         </tr>
         <tr align='center'>
           <td></td><td>16:00</td>
-          <td>•</td><td bgcolor='tan'>12:00</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>12:00</td>
         </tr>
         <tr align='center'>
-          <td>•</td><td bgcolor='tan'>17:30</td>
-          <td>•</td><td bgcolor='tan'>13:30</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>17:30</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>13:30</td>
         </tr>
         <tr align='center'>
           <td></td><td>18:00</td>
@@ -180,57 +195,11 @@
         </tr>
         <tr align='center'>
           <td></td><td>22:00</td>
-          <td>•</td><td bgcolor='tan'>18:00</td>
+          <td bgcolor='tan'>•</td><td bgcolor='tan'>18:00</td>
         </tr>
         </table>
       </td>
     </tr>
-    <tr>
-      <td onclick="normal_screen();" class='time' id='br'>BR</td>
-    </tr>
-    
-    <!--
-    <tr class='time'>
-      <td onclick="full_screen();" colspan=27 align='center' id='uk'>UK</td>
-    </tr>
-    <tr align='center' class='time_texto'>
-      <td bgcolor='tan' id='09_uk_digit'>Start</td>
-      <td bgcolor='gray' id='12_uk_digit'>I-Lunch</td>
-      <td bgcolor='gray' id='13_uk_digit'>F-Almoco</td>
-      <td id='16_uk_digit'></td>
-      <td bgcolor='tan' id='17_uk_digit'>End</td>
-      <td id='22_uk_digit'></td>
-    </tr>
-    <tr align='center' class='time_descricao'>
-      <td bgcolor='tan' id='09_uk_digit'>09:00</td>
-      <td bgcolor='gray' id='12_uk_digit'>12:00</td>
-      <td bgcolor='gray' id='13_uk_digit'>13:00</td>
-      <td id='16_uk_digit'>16:00</td>
-      <td bgcolor='tan' id='17_uk_digit'>17:30</td>
-      <td id='22_uk_digit'>22:00</td>
-    </tr>
-
-    <tr align='center' class='time_texto'>
-      <td id='05_br_digit'></td>
-      <td bgcolor='tan' id='08_br_digit'>Start</td>
-      <td id='09_br_digit'></td>
-      <td bgcolor='gray' id='12_br_digit'>I-Lunch</td>
-      <td bgcolor='gray' id='13_br_digit'>F-Lunch</td>
-      <td bgcolor='tan' id='18_br_digit'>End</td>
-    </tr>
-    <tr align='center' class='time_descricao'>
-      <td id='5_br_digit'>05:00</td>
-      <td bgcolor='tan' id='8_br_digit'>08:00</td>
-      <td id='9_br_digit'>09:00</td>
-      <td bgcolor='gray' id='12_br_digit'>12:00</td>
-      <td bgcolor='gray' id='13_br_digit'>13:30</td>
-      <td bgcolor='tan' id='18_br_digit'>18:00</td>
-    </tr>
-    <tr class='time'>
-      <td onclick="normal_screen();" colspan=27 align='center' id='br'>BR</td>
-    </tr>
-    -->
     </table>
-
 </body>
 </html>
